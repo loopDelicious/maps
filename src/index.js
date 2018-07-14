@@ -1,14 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Map from './components/map'
 
-import './css/reset.css';
-import './css/variables.css';
-import './css/index.css';
+class Application extends React.Component {
+    render() {
+        return (
 
-import App from './components/App.js';
+            <div>
+                <Map />
 
-// import registerServiceWorker from './components/registerServiceWorker.js';
+            </div>
 
-ReactDOM.render(<App />, document.getElementById('root'));
+        );
+    }
+}
 
-// registerServiceWorker();
+ReactDOM.render(<Application />, document.getElementById('app'));
