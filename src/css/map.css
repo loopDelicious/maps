@@ -43,3 +43,19 @@ body {
    border: 10px solid transparent;
    z-index: 1;
  }
+
+ .mapboxgl-popup-anchor-bottom {
+   align-self: center;
+   border-bottom: none;
+   border-top-color: #fff;
+ }
+
+.mapboxgl-popup-close-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 0;
+  border-radius: 0 3px 0 0;
+  cursor: pointer;
+  background-color: transparent;
+}

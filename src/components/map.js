@@ -1,45 +1,22 @@
 import React from 'react'
 import mapboxgl from 'mapbox-gl'
 import secrets from '../secrets'
+import geojson from '../data.json'
 import '../css/map.css'
 
 mapboxgl.accessToken = secrets.mapboxKey;
 
 class Map extends React.Component {
 
+    //todo: toggle chloropleth with tooltips view using redux example
+
     componentDidMount() {
         let map = new mapboxgl.Map({
-            container: 'map',
+            container: this.mapContainer,
             style: 'mapbox://styles/mapbox/light-v9',
-            center: [-96, 37.8],
-            zoom: 3
+            center: [-122.4194155, 37.7749295],
+            zoom: 12
         });
-
-        let geojson = {
-            type: 'FeatureCollection',
-            features: [{
-                type: 'Feature',
-                geometry: {
-                    type: 'Point',
-                    coordinates: [-77.032, 38.913]
-                },
-                properties: {
-                    title: 'Mapbox',
-                    description: 'Washington, D.C.'
-                }
-            },
-                {
-                    type: 'Feature',
-                    geometry: {
-                        type: 'Point',
-                        coordinates: [-122.414, 37.776]
-                    },
-                    properties: {
-                        title: 'Mapbox',
-                        description: 'San Francisco, California'
-                    }
-                }]
-        };
 
         geojson.features.forEach(function(marker) {
 

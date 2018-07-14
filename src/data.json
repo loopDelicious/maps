@@ -1,0 +1,34 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-122.387123, 37.770371]
+    },
+    "properties": {
+      "title": "Cisco Meraki",
+      "description": "500 Terry A Francois Boulevard"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-122.3915621, 37.7879235]
+    },
+    "properties": {
+      "title": "Twilio",
+      "description": "375 Beale Street"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-122.4007997, 37.7892151]
+    },
+    "properties": {
+      "title": "Postman",
+      "description": "595 Market Street"
+    }
+  }]
+}
