@@ -1,5 +1,6 @@
 import React from 'react'
 import mapboxgl from 'mapbox-gl'
+import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder'
 import secrets from '../secrets'
 import geojson from '../data.json'
 import '../css/map.css'
@@ -11,12 +12,20 @@ class Map extends React.Component {
     //todo: toggle chloropleth with tooltips view using redux example
 
     componentDidMount() {
-        let map = new mapboxgl.Map({
+        const map = new mapboxgl.Map({
             container: this.mapContainer,
             style: 'mapbox://styles/mapbox/light-v9',
             center: [-122.4194155, 37.7749295],
-            zoom: 12
+            zoom: 12,
+            pitch: 0
         });
+
+        const geocoder = new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken
+        });
+        geocoder.className = 'geocoder';
+
+        document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 
         geojson.features.forEach(function(marker) {
 
