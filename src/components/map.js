@@ -3,6 +3,8 @@ import mapboxgl from 'mapbox-gl'
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder'
 import secrets from '../secrets'
 import geojson from '../data.json'
+import meetups from '../meetups.json'
+import 'mapbox-gl/dist/mapbox-gl.css'
 import '../css/map.css'
 
 mapboxgl.accessToken = secrets.mapboxKey;
@@ -58,7 +60,8 @@ class Map extends React.Component {
     // };
 
     addMarkers = (map) => {
-        geojson.features.forEach(function(marker) {
+        // geojson.features.forEach(function(marker) { // to plot feet on the street
+        meetups.features.forEach(function(marker) {  // to plot meetups
 
             let el = document.createElement('div');
             el.className = 'marker';
@@ -85,7 +88,8 @@ class Map extends React.Component {
             container: this.mapContainer,
             style: 'mapbox://styles/mapbox/light-v9',
             center: [-122.4194155, 37.7749295],
-            zoom: 12,
+            // zoom: 12, // to plot feet on the street
+            zoom: 0, // to plot meetups
             pitch: 0
         });
 

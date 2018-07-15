@@ -1,0 +1,84 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-2.993933, 53.403565]
+    },
+    "properties": {
+      "title": "Liverpool Tester Gathering",
+      "description": "Tales from the trenches - Challenges of API testing with Postman & REST Assured"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-94.590573, 39.120625]
+    },
+    "properties": {
+      "title": "Software Testing KC",
+      "description": "Testing APIs with Postman Workshop"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [73.913661, 18.542450]
+    },
+    "properties": {
+      "title": "PHP Reboot",
+      "description": "API Testing using Postman and automating test scripts using Newman"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [145.038380, -37.822809]
+    },
+    "properties": {
+      "title": "Melbourne Software Testing Meetup Group (MST)",
+      "description": "TConf Workshops: API testing fundamentals"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [27.600588, 47.156243]
+    },
+    "properties": {
+      "title": "DotNet Iasi",
+      "description": "Postman tests in CI/CD pipelines"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [0.186135, 52.078533]
+    },
+    "properties": {
+      "title": "Genome Campus Software Community",
+      "description": "Test and deliver non-linear workflows with Newman and GoCD."
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-6.269463, 53.348867]
+    },
+    "properties": {
+      "title": "PyLadies Dublin",
+      "description": "PyLadies Dublin August Meetup @ Phorest Salon Software"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-87.635915, 41.878876]
+    },
+    "properties": {
+      "title": "Chicago PyLadies",
+      "description": "Aahh! Real Endpoints - An intro to creating a RESTful API using Flask and SQLite"
+    }
+  }]
+}
