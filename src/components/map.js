@@ -10,6 +10,8 @@ mapboxgl.accessToken = secrets.mapboxKey;
 class Map extends React.Component {
 
     //todo: toggle chloropleth with tooltips view using redux example
+    // https://bl.ocks.org/hrecht/82b6440ed3b982a6f594
+    // todo: load data dynamically
 
     office = {
         "id": "points",
@@ -28,7 +30,7 @@ class Map extends React.Component {
             }
         },
         "layout": {
-            "icon-image": "cat",
+            "icon-image": "postman",
             "icon-size": 0.25
         }
     };

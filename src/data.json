@@ -20,5 +20,15 @@
       "title": "Twilio",
       "description": "375 Beale Street"
     }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-122.399738, 37.775247]
+    },
+    "properties": {
+      "title": "Pinterest",
+      "description": "651 Brannan St"
+    }
   }]
 }
