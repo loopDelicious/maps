@@ -83,7 +83,7 @@ class Map extends React.Component {
             container: this.mapContainer,
             style: 'mapbox://styles/mapbox/light-v9',
             center: [-122.4194155, 37.7749295],
-            zoom: 11,
+            zoom: 12,
             pitch: 0
         });
 
