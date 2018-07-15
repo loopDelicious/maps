@@ -20,15 +20,5 @@
       "title": "Twilio",
       "description": "375 Beale Street"
     }
-  }, {
-    "type": "Feature",
-    "geometry": {
-      "type": "Point",
-      "coordinates": [-122.4007997, 37.7892151]
-    },
-    "properties": {
-      "title": "Postman",
-      "description": "595 Market Street"
-    }
   }]
 }

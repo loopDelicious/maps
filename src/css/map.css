@@ -19,6 +19,10 @@ body {
   cursor: pointer;
 }
 
+.home {
+  background-image: url('../img/postman.png');
+}
+
 .mapboxgl-popup {
   max-width: 200px;
   position: absolute;
