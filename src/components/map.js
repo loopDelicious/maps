@@ -1,9 +1,10 @@
 import React from 'react'
 import mapboxgl from 'mapbox-gl'
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder'
+import moment from 'moment'
 import secrets from '../secrets'
-import geojson from '../data.json'
-import meetups from '../meetups.json'
+// import geojson from '../data.json'
+// import meetups from '../meetups.json'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import '../css/map.css'
 
@@ -60,19 +61,24 @@ class Map extends React.Component {
     // };
 
     addMarkers = (map) => {
-        // geojson.features.forEach(function(marker) { // to plot feet on the street
-        meetups.features.forEach(function(marker) {  // to plot meetups
+        // geojson.features.forEach(function(marker) { // to plot feet on the street from local data file
+        // meetups.features.forEach(function(marker) {  // to plot meetups from local data file
+        // fetch(`https://api.meetup.com/2/open_events?key=${secrets.meetupKey}&text=postman&category=34`)
+        fetch(`https://api.meetup.com/find/upcoming_events?key=${secrets.meetupKey}&text=postman&topic_category=34&start_date_range=${moment().format('YYYY-MM-DDTHH:MM:SS')}&radius=global`).then((response) => {
+            return response.json();
+        })
+            .then((myJson) => {
+                myJson.results.forEach(function(marker) {
+                    let el = document.createElement('div');
+                    el.className = 'marker';
 
-            let el = document.createElement('div');
-            el.className = 'marker';
-
-            new mapboxgl.Marker(el)
-                .setLngLat(marker.geometry.coordinates)
-                .setPopup(new mapboxgl.Popup({ offset: 10 }) // add popups
-                    .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
-                .addTo(map);
-
-        });
+                    new mapboxgl.Marker(el)
+                        .setLngLat([marker.venue.lon, marker.venue.lat])
+                        .setPopup(new mapboxgl.Popup({ offset: 10 }) // add popups
+                            .setHTML('<h3>' + marker.group.name + '</h3><p>' + marker.name + '</p>'))
+                        .addTo(map);
+                })
+            })
     };
 
     addHomeOffice = (map) => {
@@ -89,7 +95,7 @@ class Map extends React.Component {
             style: 'mapbox://styles/mapbox/light-v9',
             center: [-122.4194155, 37.7749295],
             // zoom: 12, // to plot feet on the street
-            zoom: 0, // to plot meetups
+            zoom: 1, // to plot meetups
             pitch: 0
         });
 
