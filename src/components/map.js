@@ -84,6 +84,8 @@ class Map extends React.Component {
             let el = document.createElement('div');
             el.className = 'marker';
 
+            // adding test commit
+
             new mapboxgl.Marker(el)
                 .setLngLat(marker.geometry.coordinates)
                 .setPopup(new mapboxgl.Popup({offset: 10}) // add popups
