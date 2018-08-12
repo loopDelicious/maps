@@ -24,6 +24,10 @@ body {
   cursor: pointer;
 }
 
+.mapboxgl-marker {
+  position: absolute;
+}
+
 .home {
   background-image: url('../img/postman.png');
 }
